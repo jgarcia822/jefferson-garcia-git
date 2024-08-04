@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Bibliografía especializada - JGS</title>
+ 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"], input[type="date"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        h2 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario Bibliografía especializada - Biblioteca</h2>
+        <h3>ADSO 2721498</h3>
+        <form action="#" method="post" id="myForm">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Seleccionar</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select>
+
+            <label>Color preferido:</label>
+            <label for="amarillo">Amarillo</label>
+            <input type="checkbox" id="amarillo" name="color[]" value="amarillo">
+            <label for="verde">Verde</label>
+            <input type="checkbox" id="verde" name="color[]" value="verde">
+
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <button type="submit">Enviar</button>
+            <button type="button" onclick="limpiarFormulario()">Borrar</button>
+        </form>
+    </div>
+
+    <script>
+        function limpiarFormulario() {
+            document.getElementById("myForm").reset();
+        }
+    </script>
+</body>
+</html>
